@@ -614,6 +614,7 @@ body {
   list-style: none;
   padding: 0;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   margin-top: 40px;
 }
@@ -640,12 +641,14 @@ body {
 }
 #modern-details .mustang-left .compare-social {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-block: 35px 5px;
 }
 #modern-details .mustang-left .compare-social .compare {
   width: 50%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   list-style: none;
   padding: 0;
@@ -1319,15 +1322,137 @@ body {
 }
 
 /* ==================RESPONSIVE======================= */
+@media (max-width: 575px) {
+  #modern-details .mustang-left .mustang-picture .big-pic .vehicle-vid {
+    padding: 5px 10px;
+  }
+  #modern-details .mustang-left .mustang-picture .big-pic .vehicle-vid i {
+    margin: 0;
+  }
+  #modern-details .mustang-left .mustang-picture .big-pic .vehicle-vid span {
+    display: none;
+  }
+  #modern-details .mustang-left .mustang-picture .little-pics li {
+    width: 31%;
+  }
+  #modern-details .mustang-left .mustang-picture .little-pics li:nth-child(4) {
+    display: none;
+  }
+  #modern-details .mustang-left .mustang-picture .little-pics li:last-child {
+    display: none;
+  }
+  #modern-details .mustang-left .paths {
+    flex-direction: column;
+  }
+  #modern-details .mustang-left .paths li a {
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+  }
+  #modern-details .mustang-left .compare-social {
+    flex-direction: column;
+  }
+  #modern-details .mustang-left .compare-social .compare {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  #modern-details .mustang-left .compare-social .compare li a {
+    padding-block: 0;
+  }
+  #modern-details .mustang-left .compare-social .social {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  #modern-details .mustang-left .overview {
+    width: 100%;
+    flex-direction: column;
+  }
+  #modern-details .mustang-left .overview li a {
+    font-size: 14px;
+    padding-inline: 0;
+    width: 100%;
+  }
+  #modern-details .mustang-left .related .vehicles .car-box {
+    width: 47%;
+  }
+  #modern-details .mustang-left .related .vehicles .car-box .description a::before {
+    bottom: -20%;
+  }
+  #modern-details .mustang-left .related .vehicles .car-box .description a::after {
+    bottom: -30%;
+    height: 1.5px;
+  }
+  #modern-details .mustang-left .related .vehicles .car-box .description .price {
+    display: flex;
+    flex-direction: column;
+  }
+  #modern-details .mustang-left .related .vehicles .car-box .description .price del {
+    margin-right: 0;
+  }
+  #modern-details .mustang-left .related .vehicles .car-box:last-child {
+    display: none;
+  }
+  #modern-details .mustang-right .deluxe li {
+    margin-right: 6px;
+  }
+  #modern-details .mustang-right .deluxe li a {
+    margin-right: 6px;
+  }
+  #modern-details .mustang-right .ford-h2 {
+    width: 100%;
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  #modern-details .mustang-right .request {
+    margin-bottom: 30px;
+  }
+}
 @media (min-width: 576px) and (max-width: 767px) {
+  #modern-details .mustang-left .mustang-picture .big-pic .vehicle-vid {
+    padding: 5px 10px;
+  }
+  #modern-details .mustang-left .mustang-picture .big-pic .vehicle-vid i {
+    margin: 0;
+  }
+  #modern-details .mustang-left .mustang-picture .big-pic .vehicle-vid span {
+    display: none;
+  }
+  #modern-details .mustang-left .mustang-picture .little-pics li {
+    width: 32%;
+  }
+  #modern-details .mustang-left .mustang-picture .little-pics li:nth-child(4) {
+    display: none;
+  }
+  #modern-details .mustang-left .mustang-picture .little-pics li:last-child {
+    display: none;
+  }
+  #modern-details .mustang-left .compare-social .compare {
+    width: 65%;
+  }
+  #modern-details .mustang-left .compare-social .social {
+    width: 35%;
+  }
   #modern-details .mustang-left .related .vehicles .car-box {
     width: 48%;
   }
   #modern-details .mustang-left .related .vehicles .car-box:last-child {
     display: none;
   }
+  #modern-details .mustang-left .overview {
+    width: 100%;
+  }
+  #modern-details .mustang-left .overview li {
+    margin-right: 20px;
+  }
+  #modern-details .mustang-left .overview li a {
+    font-size: 14px;
+    padding: 10px 0;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  #modern-details {
+    padding-inline: 1rem;
+  }
   #modern-details .mustang-left .mustang-picture .big-pic .vehicle-vid {
     padding: 5px 10px;
   }
@@ -1369,8 +1494,14 @@ body {
   #modern-details .mustang-left .related .vehicles .car-box:last-child {
     display: none;
   }
+  #modern-details .mustang-left .related .vehicles .car-box a {
+    font-size: 14px;
+  }
 }
 @media (min-width: 991px) and (max-width: 992px) {
+  #modern-details {
+    padding-inline: 1rem;
+  }
   #modern-details .mustang-left .mustang-picture .big-pic .vehicle-vid {
     padding: 5px 10px;
   }
@@ -1415,7 +1546,7 @@ body {
     font-size: 21px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   #modern-details {
     padding-inline: 11rem;
   }

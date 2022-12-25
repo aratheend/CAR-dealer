@@ -91,6 +91,7 @@ body {
       list-style: none;
       padding: 0;
       display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
       margin-top: 40px;
       li {
@@ -117,11 +118,13 @@ body {
     }
     .compare-social {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       margin-block: 35px 5px;
       .compare {
         width: 50%;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         list-style: none;
         padding: 0;
@@ -818,7 +821,6 @@ body {
                 height: 100%;
                 background-color: $dark-red;
                 transition: 0.3s ease-out;
-                
               }
               span {
                 color: white;
@@ -836,18 +838,157 @@ body {
   }
 }
 
-
-
-
 /* ==================RESPONSIVE======================= */
 
-// @media (max-width: 575px){
-
-// }
+@media (max-width: 575px) {
+  #modern-details {
+    .mustang-left {
+      .mustang-picture {
+        .big-pic {
+          .vehicle-vid {
+            padding: 5px 10px;
+            i {
+              margin: 0;
+            }
+            span {
+              display: none;
+            }
+          }
+        }
+        .little-pics {
+          li {
+            width: 31%;
+            &:nth-child(4){
+              display: none;
+            }
+            &:last-child {
+              display: none;
+            }
+          }
+        }
+      }
+      .paths {
+        flex-direction: column;
+        li {
+          a {
+            width: 100%;
+            text-align: center;
+            margin-right: 0;
+          }
+        }
+      }
+      .compare-social {
+        flex-direction: column;
+        .compare {
+          width: 100%;
+          margin-bottom: 5px;
+          li {
+            a {
+              padding-block: 0;
+            }
+          }
+        }
+        .social {
+          width: 100%;
+          justify-content: flex-start;
+        }
+      }
+      .overview {
+        width: 100%;
+        flex-direction: column;
+        li {
+          a {
+            font-size: 14px;
+            padding-inline: 0;
+            width: 100%;
+          }
+        }
+      }
+      .related {
+        .vehicles {
+          .car-box {
+            width: 47%;
+            .description {
+              a {
+                &::before {
+                  bottom: -20%;
+                }
+                &::after {
+                  bottom: -30%;
+                  height: 1.5px;
+                }
+              }
+              .price {
+                display: flex;
+                flex-direction: column;
+                del {
+                  margin-right: 0;
+                }
+              }
+            }
+            &:last-child {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .mustang-right {
+      .deluxe {
+        li {
+          margin-right: 6px;
+          a {
+            margin-right: 6px;
+          }
+        }
+      }
+      .ford-h2 {
+        width: 100%;
+        font-size: 26px;
+        margin-bottom: 15px;
+      }
+      .request {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
 
 @media (min-width: 576px) and (max-width: 767px) {
   #modern-details {
     .mustang-left {
+      .mustang-picture {
+        .big-pic {
+          .vehicle-vid {
+            padding: 5px 10px;
+            i {
+              margin: 0;
+            }
+            span {
+              display: none;
+            }
+          }
+        }
+        .little-pics {
+          li {
+            width: 32%;
+            &:nth-child(4){
+              display: none;
+            }
+            &:last-child {
+              display: none;
+            }
+          }
+        }
+      }
+      .compare-social {
+        .compare {
+          width: 65%;
+        }
+        .social {
+          width: 35%;
+        }
+      }
       .related {
         .vehicles {
           .car-box {
@@ -858,12 +999,23 @@ body {
           }
         }
       }
+      .overview {
+        width: 100%;
+        li {
+          margin-right: 20px;
+          a {
+            font-size: 14px;
+            padding: 10px 0;
+          }
+        }
+      }
     }
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   #modern-details {
+    padding-inline: 1rem;
     .mustang-left {
       .mustang-picture {
         .big-pic {
@@ -913,6 +1065,9 @@ body {
             &:last-child {
               display: none;
             }
+            a {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -922,6 +1077,7 @@ body {
 
 @media (min-width: 991px) and (max-width: 992px) {
   #modern-details {
+    padding-inline: 1rem;
     .mustang-left {
       .mustang-picture {
         .big-pic {
@@ -937,6 +1093,7 @@ body {
         }
       }
     }
+    
   }
 }
 
@@ -993,7 +1150,11 @@ body {
   }
 }
 
-@media (min-width: 1200px){
+// @media (min-width: 1200px) {
+  
+// }
+
+@media (min-width: 1400px) {
   #modern-details {
     padding-inline: 11rem;
   }
